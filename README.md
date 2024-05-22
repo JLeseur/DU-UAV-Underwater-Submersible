@@ -14,7 +14,7 @@ List of Coded Programs:
 - DrainBallast.ino
 - NeutralizeMotors.ino
 
-## ThrusterTest.ino
+### ThrusterTest.ino
 This code controls two servo motors connected to an Arduino or similar microcontroller. Initially, both motors are set to a neutral position. Then, the program cycles through a sequence:
 
 1. Both motors accelerate forward for one second.
@@ -22,7 +22,10 @@ This code controls two servo motors connected to an Arduino or similar microcont
 3. Both motors accelerate in reverse for one second.
 4. They return to the neutral position again for one second.
 
-*This sequence repeats indefinitely.
+*This sequence repeats indefinitely.*
+
+### StepperTest.ino
+
   
 
 
