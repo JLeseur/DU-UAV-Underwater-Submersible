@@ -1,5 +1,5 @@
 # DU-UAV Underwater Submersible
-Author: John Leseur
+Author: John H. Leseur
 
 Last Updated: *22 May 2024*
 
