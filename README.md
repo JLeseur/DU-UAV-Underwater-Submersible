@@ -62,34 +62,34 @@ Processes MPU data when available.
 
 3. Main Program Functions:
 
-* StartUp:
+  * StartUp:
 
 Initializes the system, ensuring both motors are set to neutral.
 Transitions to the FORWARD state after a set time.
 
-* Forward:
+  * Forward:
 
 Moves the system forward for a specified distance at a constant velocity.
 Adjusts motor speeds based on orientation data from the MPU6050.
 Transitions to the STOP state when the set distance is reached.
 
-* Return:
+  * Return:
 
 Moves the system back to its starting position using orientation data.
 Similar to the Forward state but in the opposite direction.
 Transitions to the IDLE state upon reaching the starting position.
 
-* Turn:
+  * Turn:
 
 Executes a turn around maneuver by adjusting motor speeds.
 Transitions to the RETURN state after completing the turn.
 
-* Stop:
+  * Stop:
 
 Brings the system to a stop after it has moved forward.
 Transitions to the TURNING state to initiate the turn around.
 
-* Idle:
+  * Idle:
 
 Sets both motors to a neutral position, halting the system's movement.
 
