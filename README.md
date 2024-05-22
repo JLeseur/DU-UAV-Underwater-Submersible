@@ -44,7 +44,12 @@ It defines pins and variables, sets up interrupt service routines (ISR), and map
 * Based on system weight distribution, it is encouraged to not use the backwards mapping as the system will tend to dive under the water and lose connection *
 
 ## IMUTurnCorrection.ino
-This code utilizes the MPU6050 sensor and DMP (Digital Motion Processor) to implement turn correction functionality. It includes initialization of the MPU6050 sensor, calibration, and configuration of the DMP. The main loop continuously monitors sensor data, calculates Euler angles, and adjusts motor outputs accordingly for turn correction. The Forward() function evaluates the yaw angle and adjusts servo motor signals to correct deviations from the desired heading. Additionally, it incorporates interrupt handling for sensor data availability and LED blinking to indicate activity. Overall, this code provides real-time correction based on sensor readings to maintain a specified orientation.
+This code utilizes the MPU6050 sensor and DMP (Digital Motion Processor) to implement turn correction functionality. It initializes the MPU6050 sensor, calibrates it, and configures the DMP. The main loop continuously monitors sensor data, calculates Euler angles, and adjusts motor outputs accordingly for turn correction.
+
+The Forward() function evaluates the yaw angle and adjusts the thruster motor signals to correct deviations of 10 degrees from the desired heading. This code provides real-time correction based on sensor readings to maintain a straight line.
+
+## SimpleTurnAround.ino
+
 
 
   
