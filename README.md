@@ -55,44 +55,45 @@ Initializes the MPU6050 sensor and sets up communication via I2C.
 Sets up the Serial communication for debugging purposes.
 Initializes servo motors for controlling the system's movement.
 
-2. Main Program Loop (loop()):
+2. Main Program Loop:
 
 Waits for interrupts from the MPU6050 or for new data packets.
 Processes MPU data when available.
-Main Program Functions:
 
-3. StartUp:
+3. Main Program Functions:
+
+* StartUp:
 
 Initializes the system, ensuring both motors are set to neutral.
 Transitions to the FORWARD state after a set time.
 
-4. Forward:
+* Forward:
 
 Moves the system forward for a specified distance at a constant velocity.
 Adjusts motor speeds based on orientation data from the MPU6050.
 Transitions to the STOP state when the set distance is reached.
 
-5. Return:
+* Return:
 
 Moves the system back to its starting position using orientation data.
 Similar to the Forward state but in the opposite direction.
 Transitions to the IDLE state upon reaching the starting position.
 
-6. Turn:
+* Turn:
 
 Executes a turn around maneuver by adjusting motor speeds.
 Transitions to the RETURN state after completing the turn.
 
-7. Stop:
+* Stop:
 
 Brings the system to a stop after it has moved forward.
 Transitions to the TURNING state to initiate the turn around.
 
-8. Idle:
+* Idle:
 
 Sets both motors to a neutral position, halting the system's movement.
 
-9. Helper Functions:
+* Helper Functions:
 
 dmpDataReady: Interrupt service routine triggered when MPU6050 data is ready.
 getPosition: Retrieves orientation data (yaw, pitch, roll) from the MPU6050.
