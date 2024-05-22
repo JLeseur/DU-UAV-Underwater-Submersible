@@ -41,7 +41,7 @@ It defines pins and variables, sets up interrupt service routines (ISR), and map
 4. The updateState() function maps receiver input to system states, prioritizing certain movements.
 5. The loop() function continuously updates the system state based on input and executes corresponding actions. Additional functions handle motor control and provide diagnostic information through serial communication.
 
-* Based on system weight distribution, it is encouraged to not use the backwards mapping as the system will tend to dive under the water and lose connection *
+*Based on system weight distribution, it is encouraged to not use the backwards mapping as the system will tend to dive under the water and lose connection*
 
 ## IMUTurnCorrection.ino
 This code utilizes the MPU6050 sensor and DMP (Digital Motion Processor) to implement turn correction functionality. It initializes the MPU6050 sensor, calibrates it, and configures the DMP. The main loop continuously monitors sensor data, calculates Euler angles, and adjusts motor outputs accordingly for turn correction.
