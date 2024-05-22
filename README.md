@@ -28,8 +28,18 @@ This code controls two servo motors connected to an Arduino or similar microcont
 This code operates two stepper motors through an Arduino board and TB6600 stepper motor driver. It establishes pin connections for direction and stepping, sets the total steps for rotation, and continuously executes a loop to control motor movement. The loop increments step counts, performs individual steps for each motor, and halts when the total steps are reached, entering an infinite loop to stop further operation. Overall, it enables continuous rotation of the motors in both directions without relying on external libraries.
 
 It is important to note the polarities of the stepper motors which is seen in the comments. The direction pins are inversed:
-* For the left stepper a signal of a HIGH pulls the stepper in
+* For the Left stepper a signal of a HIGH pulls the stepper in
 * For the Right stepper a signal of a LOW pulls the stepper in
+
+## RX_IntegratedTest.ino
+This code operates the system with multiple components, including the stepper motors and servo motors. 
+It defines pins and variables, sets up interrupt service routines (ISR), and maps receiver input channels to system states. 
+
+1. Two stepper motors' connections are defined, specifying pins for direction and stepping.
+2. The code includes functions to handle various states based on receiver input, controlling the motors accordingly (forward, backward, left, right, etc.).
+3. There are specific routines for controlling the ballast mechanism using the stepper motors.
+4. The updateState() function maps receiver input to system states, prioritizing certain movements.
+5. The loop() function continuously updates the system state based on input and executes corresponding actions. Additional functions handle motor control and provide diagnostic information through serial communication.
 
   
 
