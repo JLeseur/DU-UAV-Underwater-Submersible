@@ -108,7 +108,7 @@ It defines three main states: "DRAIN," "PULLIN," and "IDLE."
 * Once the draining process is complete, the system transitions to the "PULLIN" state, where the motors then pull the ballast in until it reaches its original position.
 * After completing the "PULLIN" operation, the system goes into an "IDLE" state.
 
-*Note: This code usually doesn't need to be used and most troubleshooting or ballast draining should be done by adjusting the step count on the StepperTest.ino for more fine tune control of the ballast*
+*Note: This code usually doesn't need to be used and most troubleshooting or ballast draining should be done by adjusting the step count on the StepperTest.ino for more fine tuned control of the ballast*
 
 ## NeutralizeMotors.ino
 This code is used to neutralize all motors on the system. The pins for two stepper motors are defined as dirPinL, stepPinL, dirPinR, and stepPinR. Both thrusters are attached to pins 5 and 6.
