@@ -13,6 +13,15 @@ List of Coded Programs:
 - SimpleTurnAround.ino
 - DrainBallast.ino
 - NeutralizeMotors.ino
+
+##ThrusterTest.ino
+This code controls two servo motors connected to an Arduino or similar microcontroller. Initially, both motors are set to a neutral position. Then, the program cycles through a sequence:
+
+Both motors accelerate for one second.
+They return to the neutral position for one second.
+Both motors reverse direction for one second.
+They return to the neutral position again for one second.
+This sequence repeats indefinitely.
   
 
 
