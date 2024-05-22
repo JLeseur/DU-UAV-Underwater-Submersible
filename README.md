@@ -21,6 +21,7 @@ This code controls two servo motors connected to an Arduino or similar microcont
 2. They return to the neutral position for one second.
 3. Both motors accelerate in reverse for one second.
 4. They return to the neutral position again for one second.
+
 *This sequence repeats indefinitely.
   
 
