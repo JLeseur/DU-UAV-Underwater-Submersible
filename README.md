@@ -1,5 +1,6 @@
 # DU-UAV Underwater Submersible
 Author: John Leseur
+Last Updated: 22 May 2024
 
 *This repository contains all the code and descriptions of code that was used to control our Senior Design project for the University of Denver SRI Lab*
 
@@ -96,6 +97,27 @@ Sets both motors to a neutral position, halting the system's movement.
 * Helper Functions:
   - dmpDataReady: Interrupt service routine triggered when MPU6050 data is ready.
   - getPosition: Retrieves orientation data (yaw, pitch, roll) from the MPU6050.
+
+## DrainBallast.ino
+The code controls two stepper motors connected to the system's ballast tanks. 
+
+It defines three main states: "DRAIN," "PULLIN," and "IDLE."
+
+* In the "DRAIN" state, the system activates the stepper motors to push the ballast out, effectively draining water from the tanks.
+* Once the draining process is complete, the system transitions to the "PULLIN" state, where the motors then pull the ballast in until it reaches its original position.
+* After completing the "PULLIN" operation, the system goes into an "IDLE" state.
+
+*Note: This code usually doesn't need to be used and most troubleshooting or ballast draining should be done by adjusting the step count on the StepperTest.ino for more fine tune control of the ballast*
+
+## NeutralizeMotors.ino
+This code is used to neutralize all motors on the system. The pins for two stepper motors are defined as dirPinL, stepPinL, dirPinR, and stepPinR. Both thrusters are attached to pins 5 and 6.
+
+In the setup function, both thrusters are initialized to a neutral position of 1500 microseconds, and the stepper motors are turned off by setting their pins to LOW.
+
+The loop function continuously repeats, ensuring that both thrusters are maintained in their neutral positions and both stepper motors are turned off by setting their pins to LOW. This loop ensures that all motors remain inactive, effectively neutralizing any movement or operation.
+
+*This code is only really necessary for after performing autonomous control (i.e. SimpleTurnAround.ino). Because after shutdown, if the system is left with the autonomous control uploaded it will start up and perform the autonomous control on next boot up.*
+
 
 
 
