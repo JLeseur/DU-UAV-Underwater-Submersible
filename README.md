@@ -25,6 +25,11 @@ This code controls two servo motors connected to an Arduino or similar microcont
 *This sequence repeats indefinitely.*
 
 ## StepperTest.ino
+This code operates two stepper motors through an Arduino board and TB6600 stepper motor driver. It establishes pin connections for direction and stepping, sets the total steps for rotation, and continuously executes a loop to control motor movement. The loop increments step counts, performs individual steps for each motor, and halts when the total steps are reached, entering an infinite loop to stop further operation. Overall, it enables continuous rotation of the motors in both directions without relying on external libraries.
+
+It is important to note the polarities of the stepper motors which is seen in the comments. The direction pins are inversed:
+* For the left stepper a signal of a HIGH pulls the stepper in
+* For the Right stepper a signal of a LOW pulls the stepper in
 
   
 
