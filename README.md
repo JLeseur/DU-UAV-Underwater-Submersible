@@ -1,5 +1,5 @@
 # DU-UAV Underwater Submersible
-Author: John Leseur
+Author: John Leseur\n
 Last Updated: 22 May 2024
 
 *This repository contains all the code and descriptions of code that was used to control our Senior Design project for the University of Denver SRI Lab*
