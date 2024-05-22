@@ -94,9 +94,8 @@ Transitions to the TURNING state to initiate the turn around.
 Sets both motors to a neutral position, halting the system's movement.
 
 * Helper Functions:
-
-- dmpDataReady: Interrupt service routine triggered when MPU6050 data is ready.
-- getPosition: Retrieves orientation data (yaw, pitch, roll) from the MPU6050.
+ - dmpDataReady: Interrupt service routine triggered when MPU6050 data is ready.
+ - getPosition: Retrieves orientation data (yaw, pitch, roll) from the MPU6050.
 
 
 
