@@ -17,7 +17,7 @@ List of Coded Programs:
 - NeutralizeMotors.ino
 
 ## ThrusterTest.ino
-This code controls two servo motors connected to an Arduino UNO. Initially, both motors are set to a neutral position. Then, the program cycles through a sequence:
+This code controls two thruster motors connected to an Arduino UNO. Initially, both motors are set to a neutral position. Then, the program cycles through a sequence:
 
 1. Both motors accelerate forward for one second.
 2. They return to the neutral position for one second.
