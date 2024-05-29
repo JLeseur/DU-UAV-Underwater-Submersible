@@ -126,7 +126,7 @@ In the setup function, both thrusters are initialized to a neutral position of 1
 
 The loop function continuously repeats, ensuring that both thrusters are maintained in their neutral positions and both stepper motors are turned off by setting their pins to LOW. This loop ensures that all motors remain inactive, effectively neutralizing any movement or operation.
 
-*Note: This code is only really necessary for after performing autonomous control (i.e. SimpleTurnAround.ino). Because after shutdown, if the system is left with the autonomous control uploaded it will start up and perform the autonomous control on next boot up.*
+*Note: This code is only really necessary for after performing autonomous control (i.e. SimpleTurnAround.ino, IMUTurnCorrection). Because after shutdown, if the system is left with the autonomous control uploaded it will start up and perform the autonomous control on next boot up.*
 
 
 
