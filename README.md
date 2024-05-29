@@ -7,6 +7,8 @@ Last Updated: *22 May 2024*
 
 (All code was written inside Arduino IDE)
 
+*For the IMUTurnCorrection and SimpleTurnAround code I used Jeff Rowbergs library for the MPU6050. This will need to be downloaded for the code to work. The library can be found here https://github.com/jrowberg/i2cdevlib*
+
 List of Coded Programs:
 - ThrusterTest.ino
 - StepperTest.ino
