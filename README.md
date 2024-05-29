@@ -38,12 +38,17 @@ It is important to note the polarities of the stepper motors which is seen in th
 ## RX_IntegratedTest.ino
 This code operates the system with multiple components, including the stepper motors and thruster motors. 
 It defines pins and variables, sets up interrupt service routines (ISR), and maps receiver input channels to system states. 
+The RX controller used for the system is the Spektrum DX6i Controller.
 
 1. Two stepper motors' connections are defined, specifying pins for direction and stepping.
 2. The code includes functions to handle various states based on receiver input, controlling the thruster motors accordingly (forward, backward, left, right, etc.).
 3. There are specific routines for controlling the ballast mechanism using the stepper motors.
 4. The updateState() function maps receiver input to system states, prioritizing certain movements.
 5. The loop() function continuously updates the system state based on input and executes corresponding actions. Additional functions handle motor control and provide diagnostic information through serial communication.
+
+To operate the system the controls are as follows:
+- Right Joystick: Controls movement of the systems. The system is capable of Forward, Backard, Left, or Right movement. This is en Exclusive OR, so only one direction can be used at a time.
+- Left Joystick: Controls the Submersion protocol. The submersion protocol is a timed protocol when the system will submerge and wait for a specified time till it initiates it's Resurfacing protocol. To enter this protocol, simply push the left joystick all the way up, then pull the joystick back down to it's bottom position. (This is necessary as if the left joystick is left in the upper position, the system will continuously loop through the submersion protocol.)
 
 *Note: Based on system weight distribution, it is encouraged to not use the backwards mapping as the system will tend to dive under the surface of the water and lose connection*
 
