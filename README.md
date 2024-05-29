@@ -50,7 +50,7 @@ To operate the system the controls are as follows:
 - Right Joystick: Controls movement of the systems. The system is capable of Forward, Backard, Left, or Right movement. This is en Exclusive OR, so only one direction can be used at a time.
 - Left Joystick: Controls the Submersion protocol. The submersion protocol is a timed protocol when the system will submerge and wait for a specified time till it initiates it's Resurfacing protocol. To enter this protocol, simply push the left joystick all the way up, then pull the joystick back down to it's bottom position. (This is necessary as if the left joystick is left in the upper position, the system will continuously loop through the submersion protocol.)
 
-*Note: Based on system weight distribution, it is encouraged to not use the backwards mapping as the system will tend to dive under the surface of the water and lose connection*
+*Note: Based on system weight distribution, it is highly encouraged to not use the backwards mapping as the system will tend to dive under the surface of the water and lose connection*
 
 ## IMUTurnCorrection.ino
 This code utilizes the MPU6050 sensor and DMP (Digital Motion Processor) to implement turn correction functionality. It initializes the MPU6050 sensor, calibrates it, and configures the DMP. The main loop continuously monitors sensor data, calculates Euler angles, and adjusts motor outputs accordingly for turn correction.
