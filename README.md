@@ -57,6 +57,8 @@ This code utilizes the MPU6050 sensor and DMP (Digital Motion Processor) to impl
 
 The Forward() function evaluates the yaw angle and adjusts the thruster motor signals to correct deviations of 10 degrees from the desired heading. This code provides real-time correction based on sensor readings to maintain driving in a straight line.
 
+*It is important that when using the IMU and initializing the DMP, you hold the IMU as still as possible so it can calibrate correctly*
+
 *This sequence repeats indefinitely. So there is no termination, this is used as a bench test of the IMU and Thrusters*
 
 ## SimpleTurnAround.ino
