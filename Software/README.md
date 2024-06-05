@@ -1,7 +1,7 @@
 # DU-UAV Underwater Submersible
 Author: John H. Leseur
 
-Last Updated: *22 May 2024*
+Last Updated: *05 June 2024*
 
 *This repository contains all the code and descriptions of code that was used to control our Senior Design project for the University of Denver Unmanned Systems Research Institute Lab*
 
